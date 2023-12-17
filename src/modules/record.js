@@ -5,21 +5,21 @@ export function checkRecord() {
   if (!localStorage.getItem('record')) {
     localStorage.setItem('record', optCtrlSnake.record.toString())
 
-    uppdateRecordFoot()
+      updateRecordFoot()
   } else {
     if (+localStorage.getItem('record') < optCtrlSnake.lengthSnake) {
       optCtrlSnake.record = +localStorage.getItem('record') + 1
       localStorage.setItem('record', optCtrlSnake.record.toString())
 
-      uppdateRecordFoot()
+        updateRecordFoot()
     } else {
       optCtrlSnake.record = +localStorage.getItem('record')
-      uppdateRecordFoot()
+        updateRecordFoot()
     }
   }
 }
 
-function uppdateRecordFoot() {
+function updateRecordFoot() {
   defineNumbers(
     optCtrlSnake.record,
     {
@@ -28,7 +28,7 @@ function uppdateRecordFoot() {
         y: 0,
         z: 0.7,
       },
-      distanse: {
+      distance: {
         x: 0,
         y: -1.9,
         z: 0,
@@ -44,6 +44,6 @@ function uppdateRecordFoot() {
         z: Math.PI * 1.5,
       },
     },
-    'recorod'
+    'record'
   )
 }

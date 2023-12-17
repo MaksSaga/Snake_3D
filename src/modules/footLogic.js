@@ -44,19 +44,19 @@ function positionFoot(elem, x, y, z = 0) {
 	elem.position.set(x, y, z)
 }
 
-uppdateCaunterFoot()
+updateCounterFoot()
 checkRecord()
 export function checkingTouchFood() {
 	if (optCtrlSnake.body[0].x === optFoot.x && optCtrlSnake.body[0].y === optFoot.y) {
 		addSizeSnake(1)
-		uppdateCaunterFoot()
+		updateCounterFoot()
 		checkRecord()
 		clearFoot()
 		createFoot()
 	}
 }
 
-export function uppdateCaunterFoot() {
+export function updateCounterFoot() {
 	defineNumbers(
 		optCtrlSnake.lengthSnake,
 		{
@@ -65,7 +65,7 @@ export function uppdateCaunterFoot() {
 				y: 15.5,
 				z: 0.2,
 			},
-			distanse: {
+			distance: {
 				x: 1.9,
 				y: 0,
 				z: 0,

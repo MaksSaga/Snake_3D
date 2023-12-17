@@ -1,7 +1,7 @@
 import { optPlatform, optCtrlSnake, optKey } from './options.js'
 
 // snake path
-export function snakePuth() {
+export function snakePath() {
   optCtrlSnake.y += optCtrlSnake.moveY
   optCtrlSnake.x += optCtrlSnake.moveX
 }
@@ -20,32 +20,32 @@ function control(event) {
     optKey.forEach(item => (item === key ? (optCtrlSnake.start = true) : ''))
   if (optCtrlSnake.activeKey === false) return
 
-  if (key === 'ArrowUp' && optCtrlSnake.puth !== 'ArrowDown') {
+  if (key === 'ArrowUp' && optCtrlSnake.path !== 'ArrowDown') {
     Object.assign(optCtrlSnake, {
       moveY: optCtrlSnake.step,
       moveX: 0,
-      puth: 'ArrowUp',
+      path: 'ArrowUp',
       activeKey: false,
     })
-  } else if (key === 'ArrowDown' && optCtrlSnake.puth !== 'ArrowUp') {
+  } else if (key === 'ArrowDown' && optCtrlSnake.path !== 'ArrowUp') {
     Object.assign(optCtrlSnake, {
       moveY: -optCtrlSnake.step,
       moveX: 0,
-      puth: 'ArrowDown',
+      path: 'ArrowDown',
       activeKey: false,
     })
-  } else if (key === 'ArrowLeft' && optCtrlSnake.puth !== 'ArrowRight') {
+  } else if (key === 'ArrowLeft' && optCtrlSnake.path !== 'ArrowRight') {
     Object.assign(optCtrlSnake, {
       moveY: 0,
       moveX: -optCtrlSnake.step,
-      puth: 'ArrowLeft',
+      path: 'ArrowLeft',
       activeKey: false,
     })
-  } else if (key === 'ArrowRight' && optCtrlSnake.puth !== 'ArrowLeft') {
+  } else if (key === 'ArrowRight' && optCtrlSnake.path !== 'ArrowLeft') {
     Object.assign(optCtrlSnake, {
       moveY: 0,
       moveX: optCtrlSnake.step,
-      puth: 'ArrowRight',
+      path: 'ArrowRight',
       activeKey: false,
     })
   }

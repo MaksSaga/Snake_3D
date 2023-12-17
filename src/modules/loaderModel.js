@@ -1,6 +1,6 @@
 import { loaderModel } from './global.js'
 
-export const platforModel = require('../models/b_p_12.gltf')
+export const platformModel = require('../models/b_p_12.gltf')
 export const appleModel = require('../models/a_p_02.gltf')
 export const snakeHeadModel = require('../models/snake_head_01.gltf')
 export const snakeBodyModel = require('../models/snake_body_02.gltf')
@@ -8,18 +8,18 @@ export const crownModel = require('../models/crown_01.gltf')
 
 loaderModel(
   // // dark
-  // platforModel,
+  // platformModel,
   // { x: -0.245, y: -0.75, z: -6.2},
   // { x: 5, y: 5, z: 5 },
   // { x: Math.PI / 2, y: 0, z: 0 },
-  // 'platforModel'
+  // 'platformModel'
 
   // light
-  platforModel,
+  platformModel,
   { x: -6.18, y: -6.06, z: -18.55 },
   { x: 5, y: 5, z: 5 },
   { x: Math.PI / 2, y: 0, z: 0 },
-  'platforModel'
+  'platformModel'
 )
 
 loaderModel(
@@ -46,7 +46,7 @@ loaderModel(
 //     { x: Math.PI / 2, y: Math.PI * 2, z: 0 },
 //     'snake'
 // );
-
+//
 // loaderModel(
 //     // snake
 //     snakeBodyModel,

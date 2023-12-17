@@ -32,7 +32,7 @@ export const optSnake = {
   y: 1,
   z: 1,
   color: 0x445c4c,
-  inten: 1,
+  inter: 1,
 }
 
 export const optFoot = {
@@ -40,7 +40,7 @@ export const optFoot = {
   y: 1,
   z: 1,
   color: 0xfa5050,
-  inten: 1,
+  inter: 1,
 }
 
 export const optDirLightOne = {
@@ -48,7 +48,7 @@ export const optDirLightOne = {
   y: -3.6,
   z: 20,
   color: 0xffffff,
-  inten: 0.8,
+  inter: 0.8,
 }
 
 export const optDirLightTwo = {
@@ -56,7 +56,7 @@ export const optDirLightTwo = {
   y: -30,
   z: 20,
   color: 0xffffff,
-  inten: 0.7,
+  inter: 0.7,
 }
 
 export const optAmbLight = {
@@ -64,7 +64,7 @@ export const optAmbLight = {
   y: 0,
   z: 0,
   color: 0xffffff,
-  inten: 0.5,
+  inter: 0.5,
 }
 
 //==== controls ====//
@@ -83,7 +83,7 @@ export const optCtrlSnake = {
   record: 0,
   activeKey: true,
   start: false,
-  puth: '',
+  path: '',
   body: [],
 }
 
@@ -100,7 +100,7 @@ export const optGlobal = {
 export const optKey = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight']
 
 export const optModelLoad = {
-  platforModel: false,
+  platformModel: false,
   appleAccount: false,
   // account : false,
   appleModel: false,

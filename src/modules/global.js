@@ -2,9 +2,9 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 import { camera, renderer, scene } from './graphics.js'
 import { optWindow, optGlobal, optCtrlSnake, optModelLoad } from './options.js'
-import { ambit, snakePuth, activeKeyTrue } from './controls.js'
+import { ambit, snakePath, activeKeyTrue } from './controls.js'
 import { createCube } from './snakeLogic.js'
-import { checkingTouchFood, uppdateCaunterFoot } from './footLogic.js'
+import { checkingTouchFood, updateCounterFoot } from './footLogic.js'
 
 // engine
 function engine(now) {
@@ -23,7 +23,7 @@ engine()
 // global render
 function move() {
   ambit(optCtrlSnake.x, optCtrlSnake.y)
-  snakePuth()
+  snakePath()
   activeKeyTrue()
   optCtrlSnake.start ? startPlay() : null
   render()
@@ -43,7 +43,7 @@ render()
 
 export function restartGame() {
   optCtrlSnake.size = optCtrlSnake.defSize
-  uppdateCaunterFoot()
+  updateCounterFoot()
 }
 
 // random position

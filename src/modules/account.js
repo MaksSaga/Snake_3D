@@ -29,9 +29,9 @@ function showNumberModel(number, info, index, id) {
   loaderModel(
     numbers[number],
     {
-      x: info.position.x + info.distanse.x * index,
-      y: info.position.y + info.distanse.y * index,
-      z: info.position.z + info.distanse.z * index,
+      x: info.position.x + info.distance.x * index,
+      y: info.position.y + info.distance.y * index,
+      z: info.position.z + info.distance.z * index,
     },
     {
       x: info.scale.x,

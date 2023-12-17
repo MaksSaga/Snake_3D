@@ -27,17 +27,17 @@ renderer.shadowMap.enabled = true
 renderer.shadowMap.type = THREE.PCFSoftShadowMap // default THREE.PCFShadowMap
 
 // ambLight
-export const ambLight = new THREE.AmbientLight(optAmbLight.color, optAmbLight.inten)
+export const ambLight = new THREE.AmbientLight(optAmbLight.color, optAmbLight.inter)
 ambLight.position.set(optAmbLight.x, optAmbLight.y, optAmbLight.z)
 scene.add(ambLight)
 
 // dirLight One
-export const dirLightOne = new THREE.DirectionalLight(optDirLightOne.color, optDirLightOne.inten)
+export const dirLightOne = new THREE.DirectionalLight(optDirLightOne.color, optDirLightOne.inter)
 dirLightOne.position.set(optDirLightOne.x, optDirLightOne.y, optDirLightOne.z)
 scene.add(dirLightOne)
 
 // dirLight Two
-export const dirLightTwo = new THREE.DirectionalLight(optDirLightTwo.color, optDirLightTwo.inten)
+export const dirLightTwo = new THREE.DirectionalLight(optDirLightTwo.color, optDirLightTwo.inter)
 dirLightTwo.position.set(optDirLightTwo.x, optDirLightTwo.y, optDirLightTwo.z)
 dirLightTwo.castShadow = true
 // Настройки теней для источника света
