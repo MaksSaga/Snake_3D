@@ -2,105 +2,105 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 189:
+/***/ 177:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "models/a_p_02.gltf";
 
 /***/ }),
 
-/***/ 936:
+/***/ 535:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "models/b_p_12.gltf";
 
 /***/ }),
 
-/***/ 925:
+/***/ 29:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "models/crown_01.gltf";
 
 /***/ }),
 
-/***/ 389:
+/***/ 137:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "models/0.gltf";
 
 /***/ }),
 
-/***/ 124:
+/***/ 694:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "models/1.gltf";
 
 /***/ }),
 
-/***/ 469:
+/***/ 683:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "models/2.gltf";
 
 /***/ }),
 
-/***/ 190:
+/***/ 616:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "models/3.gltf";
 
 /***/ }),
 
-/***/ 295:
+/***/ 693:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "models/4.gltf";
 
 /***/ }),
 
-/***/ 479:
+/***/ 906:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "models/5.gltf";
 
 /***/ }),
 
-/***/ 982:
+/***/ 519:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "models/6.gltf";
 
 /***/ }),
 
-/***/ 777:
+/***/ 980:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "models/7.gltf";
 
 /***/ }),
 
-/***/ 597:
+/***/ 713:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "models/8.gltf";
 
 /***/ }),
 
-/***/ 985:
+/***/ 198:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "models/9.gltf";
 
 /***/ }),
 
-/***/ 824:
+/***/ 844:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "models/snake_body_02.gltf";
 
 /***/ }),
 
-/***/ 93:
+/***/ 351:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "models/snake_head_01.gltf";
@@ -158,7 +158,7 @@ module.exports = __webpack_require__.p + "models/snake_head_01.gltf";
 /******/ 				var scripts = document.getElementsByTagName("script");
 /******/ 				if(scripts.length) {
 /******/ 					var i = scripts.length - 1;
-/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
 /******/ 				}
 /******/ 			}
 /******/ 		}
@@ -170,9 +170,6 @@ module.exports = __webpack_require__.p + "models/snake_head_01.gltf";
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-(() => {
 
 ;// CONCATENATED MODULE: ./src/modules/options.js
 const optWindow = {
@@ -3317,7 +3314,7 @@ class DataArrayTexture extends Texture {
 
 }
 
-class WebGLArrayRenderTarget extends (/* unused pure expression or super */ null && (WebGLRenderTarget)) {
+class WebGLArrayRenderTarget extends WebGLRenderTarget {
 
 	constructor( width = 1, height = 1, depth = 1 ) {
 
@@ -3366,7 +3363,7 @@ class Data3DTexture extends Texture {
 
 }
 
-class WebGL3DRenderTarget extends (/* unused pure expression or super */ null && (WebGLRenderTarget)) {
+class WebGL3DRenderTarget extends WebGLRenderTarget {
 
 	constructor( width = 1, height = 1, depth = 1 ) {
 
@@ -3384,7 +3381,7 @@ class WebGL3DRenderTarget extends (/* unused pure expression or super */ null &&
 
 }
 
-class WebGLMultipleRenderTargets extends (/* unused pure expression or super */ null && (WebGLRenderTarget)) {
+class WebGLMultipleRenderTargets extends WebGLRenderTarget {
 
 	constructor( width = 1, height = 1, count = 1, options = {} ) {
 
@@ -10345,7 +10342,7 @@ class three_module_BufferAttribute {
 
 //
 
-class Int8BufferAttribute extends (/* unused pure expression or super */ null && (three_module_BufferAttribute)) {
+class Int8BufferAttribute extends three_module_BufferAttribute {
 
 	constructor( array, itemSize, normalized ) {
 
@@ -10355,7 +10352,7 @@ class Int8BufferAttribute extends (/* unused pure expression or super */ null &&
 
 }
 
-class Uint8BufferAttribute extends (/* unused pure expression or super */ null && (three_module_BufferAttribute)) {
+class Uint8BufferAttribute extends three_module_BufferAttribute {
 
 	constructor( array, itemSize, normalized ) {
 
@@ -10365,7 +10362,7 @@ class Uint8BufferAttribute extends (/* unused pure expression or super */ null &
 
 }
 
-class Uint8ClampedBufferAttribute extends (/* unused pure expression or super */ null && (three_module_BufferAttribute)) {
+class Uint8ClampedBufferAttribute extends three_module_BufferAttribute {
 
 	constructor( array, itemSize, normalized ) {
 
@@ -10375,7 +10372,7 @@ class Uint8ClampedBufferAttribute extends (/* unused pure expression or super */
 
 }
 
-class Int16BufferAttribute extends (/* unused pure expression or super */ null && (three_module_BufferAttribute)) {
+class Int16BufferAttribute extends three_module_BufferAttribute {
 
 	constructor( array, itemSize, normalized ) {
 
@@ -10395,7 +10392,7 @@ class Uint16BufferAttribute extends three_module_BufferAttribute {
 
 }
 
-class Int32BufferAttribute extends (/* unused pure expression or super */ null && (three_module_BufferAttribute)) {
+class Int32BufferAttribute extends three_module_BufferAttribute {
 
 	constructor( array, itemSize, normalized ) {
 
@@ -10415,7 +10412,7 @@ class Uint32BufferAttribute extends three_module_BufferAttribute {
 
 }
 
-class Float16BufferAttribute extends (/* unused pure expression or super */ null && (three_module_BufferAttribute)) {
+class Float16BufferAttribute extends three_module_BufferAttribute {
 
 	constructor( array, itemSize, normalized ) {
 
@@ -10578,7 +10575,7 @@ class three_module_Float32BufferAttribute extends three_module_BufferAttribute {
 
 }
 
-class Float64BufferAttribute extends (/* unused pure expression or super */ null && (three_module_BufferAttribute)) {
+class Float64BufferAttribute extends three_module_BufferAttribute {
 
 	constructor( array, itemSize, normalized ) {
 
@@ -30890,7 +30887,7 @@ class three_module_InterleavedBufferAttribute {
 
 }
 
-class SpriteMaterial extends (/* unused pure expression or super */ null && (Material)) {
+class SpriteMaterial extends Material {
 
 	constructor( parameters ) {
 
@@ -30958,7 +30955,7 @@ const _uvA = /*@__PURE__*/ new Vector2();
 const _uvB = /*@__PURE__*/ new Vector2();
 const _uvC = /*@__PURE__*/ new Vector2();
 
-class Sprite extends (/* unused pure expression or super */ null && (Object3D)) {
+class Sprite extends Object3D {
 
 	constructor( material ) {
 
@@ -31113,7 +31110,7 @@ function transformVertex( vertexPosition, mvPosition, center, scale, sin, cos ) 
 const _v1$2 = /*@__PURE__*/ new three_module_Vector3();
 const _v2$1 = /*@__PURE__*/ new three_module_Vector3();
 
-class LOD extends (/* unused pure expression or super */ null && (Object3D)) {
+class LOD extends Object3D {
 
 	constructor() {
 
@@ -32616,7 +32613,7 @@ function testPoint( point, index, localThresholdSq, matrixWorld, raycaster, inte
 
 }
 
-class VideoTexture extends (/* unused pure expression or super */ null && (Texture)) {
+class VideoTexture extends Texture {
 
 	constructor( video, mapping, wrapS, wrapT, magFilter, minFilter, format, type, anisotropy ) {
 
@@ -32667,7 +32664,7 @@ class VideoTexture extends (/* unused pure expression or super */ null && (Textu
 
 }
 
-class FramebufferTexture extends (/* unused pure expression or super */ null && (Texture)) {
+class FramebufferTexture extends Texture {
 
 	constructor( width, height, format ) {
 
@@ -32688,7 +32685,7 @@ class FramebufferTexture extends (/* unused pure expression or super */ null && 
 
 }
 
-class CompressedTexture extends (/* unused pure expression or super */ null && (Texture)) {
+class CompressedTexture extends Texture {
 
 	constructor( mipmaps, width, height, format, type, mapping, wrapS, wrapT, magFilter, minFilter, anisotropy, colorSpace ) {
 
@@ -32713,7 +32710,7 @@ class CompressedTexture extends (/* unused pure expression or super */ null && (
 
 }
 
-class CompressedArrayTexture extends (/* unused pure expression or super */ null && (CompressedTexture)) {
+class CompressedArrayTexture extends CompressedTexture {
 
 	constructor( mipmaps, width, height, depth, format, type ) {
 
@@ -32727,7 +32724,7 @@ class CompressedArrayTexture extends (/* unused pure expression or super */ null
 
 }
 
-class CanvasTexture extends (/* unused pure expression or super */ null && (Texture)) {
+class CanvasTexture extends Texture {
 
 	constructor( canvas, mapping, wrapS, wrapT, magFilter, minFilter, format, type, anisotropy ) {
 
@@ -38733,7 +38730,7 @@ var Geometries = /*#__PURE__*/Object.freeze({
 	WireframeGeometry: WireframeGeometry
 });
 
-class ShadowMaterial extends (/* unused pure expression or super */ null && (Material)) {
+class ShadowMaterial extends Material {
 
 	constructor( parameters ) {
 
@@ -38766,7 +38763,7 @@ class ShadowMaterial extends (/* unused pure expression or super */ null && (Mat
 
 }
 
-class RawShaderMaterial extends (/* unused pure expression or super */ null && (ShaderMaterial)) {
+class RawShaderMaterial extends ShaderMaterial {
 
 	constructor( parameters ) {
 
@@ -39090,7 +39087,7 @@ class MeshPhysicalMaterial extends MeshStandardMaterial {
 
 }
 
-class MeshPhongMaterial extends (/* unused pure expression or super */ null && (Material)) {
+class MeshPhongMaterial extends Material {
 
 	constructor( parameters ) {
 
@@ -39204,7 +39201,7 @@ class MeshPhongMaterial extends (/* unused pure expression or super */ null && (
 
 }
 
-class MeshToonMaterial extends (/* unused pure expression or super */ null && (Material)) {
+class MeshToonMaterial extends Material {
 
 	constructor( parameters ) {
 
@@ -39300,7 +39297,7 @@ class MeshToonMaterial extends (/* unused pure expression or super */ null && (M
 
 }
 
-class MeshNormalMaterial extends (/* unused pure expression or super */ null && (Material)) {
+class MeshNormalMaterial extends Material {
 
 	constructor( parameters ) {
 
@@ -39356,7 +39353,7 @@ class MeshNormalMaterial extends (/* unused pure expression or super */ null && 
 
 }
 
-class MeshLambertMaterial extends (/* unused pure expression or super */ null && (Material)) {
+class MeshLambertMaterial extends Material {
 
 	constructor( parameters ) {
 
@@ -39466,7 +39463,7 @@ class MeshLambertMaterial extends (/* unused pure expression or super */ null &&
 
 }
 
-class MeshMatcapMaterial extends (/* unused pure expression or super */ null && (Material)) {
+class MeshMatcapMaterial extends Material {
 
 	constructor( parameters ) {
 
@@ -39541,7 +39538,7 @@ class MeshMatcapMaterial extends (/* unused pure expression or super */ null && 
 
 }
 
-class LineDashedMaterial extends (/* unused pure expression or super */ null && (LineBasicMaterial)) {
+class LineDashedMaterial extends LineBasicMaterial {
 
 	constructor( parameters ) {
 
@@ -41908,7 +41905,7 @@ class FileLoader extends Loader {
 
 }
 
-class AnimationLoader extends (/* unused pure expression or super */ null && (Loader)) {
+class AnimationLoader extends Loader {
 
 	constructor( manager ) {
 
@@ -41974,7 +41971,7 @@ class AnimationLoader extends (/* unused pure expression or super */ null && (Lo
  * Sub classes have to implement the parse() method which will be used in load().
  */
 
-class CompressedTextureLoader extends (/* unused pure expression or super */ null && (Loader)) {
+class CompressedTextureLoader extends Loader {
 
 	constructor( manager ) {
 
@@ -42180,7 +42177,7 @@ class ImageLoader extends Loader {
 
 }
 
-class CubeTextureLoader extends (/* unused pure expression or super */ null && (Loader)) {
+class CubeTextureLoader extends Loader {
 
 	constructor( manager ) {
 
@@ -42236,7 +42233,7 @@ class CubeTextureLoader extends (/* unused pure expression or super */ null && (
  * Sub classes have to implement the parse() method which will be used in load().
  */
 
-class DataTextureLoader extends (/* unused pure expression or super */ null && (Loader)) {
+class DataTextureLoader extends Loader {
 
 	constructor( manager ) {
 
@@ -42430,7 +42427,7 @@ class Light extends Object3D {
 
 }
 
-class HemisphereLight extends (/* unused pure expression or super */ null && (Light)) {
+class HemisphereLight extends Light {
 
 	constructor( skyColor, groundColor, intensity ) {
 
@@ -42915,7 +42912,7 @@ class AmbientLight extends Light {
 
 }
 
-class RectAreaLight extends (/* unused pure expression or super */ null && (Light)) {
+class RectAreaLight extends Light {
 
 	constructor( color, intensity, width = 10, height = 10 ) {
 
@@ -43208,7 +43205,7 @@ class SphericalHarmonics3 {
 
 }
 
-class LightProbe extends (/* unused pure expression or super */ null && (Light)) {
+class LightProbe extends Light {
 
 	constructor( sh = new SphericalHarmonics3(), intensity = 1 ) {
 
@@ -43251,7 +43248,7 @@ class LightProbe extends (/* unused pure expression or super */ null && (Light))
 
 }
 
-class MaterialLoader extends (/* unused pure expression or super */ null && (Loader)) {
+class MaterialLoader extends Loader {
 
 	constructor( manager ) {
 
@@ -43654,7 +43651,7 @@ class LoaderUtils {
 
 }
 
-class InstancedBufferGeometry extends (/* unused pure expression or super */ null && (three_module_BufferGeometry)) {
+class InstancedBufferGeometry extends three_module_BufferGeometry {
 
 	constructor() {
 
@@ -43691,7 +43688,7 @@ class InstancedBufferGeometry extends (/* unused pure expression or super */ nul
 
 }
 
-class BufferGeometryLoader extends (/* unused pure expression or super */ null && (Loader)) {
+class BufferGeometryLoader extends Loader {
 
 	constructor( manager ) {
 
@@ -43902,7 +43899,7 @@ class BufferGeometryLoader extends (/* unused pure expression or super */ null &
 
 }
 
-class ObjectLoader extends (/* unused pure expression or super */ null && (Loader)) {
+class ObjectLoader extends Loader {
 
 	constructor( manager ) {
 
@@ -45050,7 +45047,7 @@ class AudioContext {
 
 }
 
-class AudioLoader extends (/* unused pure expression or super */ null && (Loader)) {
+class AudioLoader extends Loader {
 
 	constructor( manager ) {
 
@@ -45110,7 +45107,7 @@ class AudioLoader extends (/* unused pure expression or super */ null && (Loader
 
 }
 
-class HemisphereLightProbe extends (/* unused pure expression or super */ null && (LightProbe)) {
+class HemisphereLightProbe extends LightProbe {
 
 	constructor( skyColor, groundColor, intensity = 1 ) {
 
@@ -45135,7 +45132,7 @@ class HemisphereLightProbe extends (/* unused pure expression or super */ null &
 
 }
 
-class AmbientLightProbe extends (/* unused pure expression or super */ null && (LightProbe)) {
+class AmbientLightProbe extends LightProbe {
 
 	constructor( color, intensity = 1 ) {
 
@@ -45325,7 +45322,7 @@ const _quaternion$1 = /*@__PURE__*/ new Quaternion();
 const _scale$1 = /*@__PURE__*/ new three_module_Vector3();
 const _orientation$1 = /*@__PURE__*/ new three_module_Vector3();
 
-class AudioListener extends (/* unused pure expression or super */ null && (Object3D)) {
+class AudioListener extends Object3D {
 
 	constructor() {
 
@@ -45450,7 +45447,7 @@ class AudioListener extends (/* unused pure expression or super */ null && (Obje
 
 }
 
-class Audio extends (/* unused pure expression or super */ null && (Object3D)) {
+class Audio extends Object3D {
 
 	constructor( listener ) {
 
@@ -45848,7 +45845,7 @@ const _quaternion = /*@__PURE__*/ new Quaternion();
 const _scale = /*@__PURE__*/ new three_module_Vector3();
 const _orientation = /*@__PURE__*/ new three_module_Vector3();
 
-class PositionalAudio extends (/* unused pure expression or super */ null && (Audio)) {
+class PositionalAudio extends Audio {
 
 	constructor( listener ) {
 
@@ -48127,7 +48124,7 @@ class AnimationAction {
 const _controlInterpolantsResultBuffer = new Float32Array( 1 );
 
 
-class AnimationMixer extends (/* unused pure expression or super */ null && (EventDispatcher)) {
+class AnimationMixer extends EventDispatcher {
 
 	constructor( root ) {
 
@@ -48902,7 +48899,7 @@ class Uniform {
 
 let id = 0;
 
-class UniformsGroup extends (/* unused pure expression or super */ null && (EventDispatcher)) {
+class UniformsGroup extends EventDispatcher {
 
 	constructor() {
 
@@ -48988,7 +48985,7 @@ class UniformsGroup extends (/* unused pure expression or super */ null && (Even
 
 }
 
-class InstancedInterleavedBuffer extends (/* unused pure expression or super */ null && (three_module_InterleavedBuffer)) {
+class InstancedInterleavedBuffer extends three_module_InterleavedBuffer {
 
 	constructor( array, stride, meshPerAttribute = 1 ) {
 
@@ -49655,7 +49652,7 @@ class Line3 {
 
 const _vector$3 = /*@__PURE__*/ new three_module_Vector3();
 
-class SpotLightHelper extends (/* unused pure expression or super */ null && (Object3D)) {
+class SpotLightHelper extends Object3D {
 
 	constructor( light, color ) {
 
@@ -49743,7 +49740,7 @@ const _boneMatrix = /*@__PURE__*/ new Matrix4();
 const _matrixWorldInv = /*@__PURE__*/ new Matrix4();
 
 
-class SkeletonHelper extends (/* unused pure expression or super */ null && (LineSegments)) {
+class SkeletonHelper extends LineSegments {
 
 	constructor( object ) {
 
@@ -49856,7 +49853,7 @@ function getBoneList( object ) {
 
 }
 
-class PointLightHelper extends (/* unused pure expression or super */ null && (Mesh)) {
+class PointLightHelper extends Mesh {
 
 	constructor( light, sphereSize, color ) {
 
@@ -49946,7 +49943,7 @@ const _vector$1 = /*@__PURE__*/ new three_module_Vector3();
 const _color1 = /*@__PURE__*/ new Color();
 const _color2 = /*@__PURE__*/ new Color();
 
-class HemisphereLightHelper extends (/* unused pure expression or super */ null && (Object3D)) {
+class HemisphereLightHelper extends Object3D {
 
 	constructor( light, size, color ) {
 
@@ -50020,7 +50017,7 @@ class HemisphereLightHelper extends (/* unused pure expression or super */ null 
 
 }
 
-class GridHelper extends (/* unused pure expression or super */ null && (LineSegments)) {
+class GridHelper extends LineSegments {
 
 	constructor( size = 10, divisions = 10, color1 = 0x444444, color2 = 0x888888 ) {
 
@@ -50068,7 +50065,7 @@ class GridHelper extends (/* unused pure expression or super */ null && (LineSeg
 
 }
 
-class PolarGridHelper extends (/* unused pure expression or super */ null && (LineSegments)) {
+class PolarGridHelper extends LineSegments {
 
 	constructor( radius = 10, sectors = 16, rings = 8, divisions = 64, color1 = 0x444444, color2 = 0x888888 ) {
 
@@ -50160,7 +50157,7 @@ const _v1 = /*@__PURE__*/ new three_module_Vector3();
 const _v2 = /*@__PURE__*/ new three_module_Vector3();
 const _v3 = /*@__PURE__*/ new three_module_Vector3();
 
-class DirectionalLightHelper extends (/* unused pure expression or super */ null && (Object3D)) {
+class DirectionalLightHelper extends Object3D {
 
 	constructor( light, size, color ) {
 
@@ -50250,7 +50247,7 @@ const _camera = /*@__PURE__*/ new Camera();
  *		https://github.com/evanw/lightgl.js/blob/master/tests/shadowmap.html
  */
 
-class CameraHelper extends (/* unused pure expression or super */ null && (LineSegments)) {
+class CameraHelper extends LineSegments {
 
 	constructor( camera ) {
 
@@ -50502,7 +50499,7 @@ function setPoint( point, pointMap, geometry, camera, x, y, z ) {
 
 const _box = /*@__PURE__*/ new Box3();
 
-class BoxHelper extends (/* unused pure expression or super */ null && (LineSegments)) {
+class BoxHelper extends LineSegments {
 
 	constructor( object, color = 0xffff00 ) {
 
@@ -50605,7 +50602,7 @@ class BoxHelper extends (/* unused pure expression or super */ null && (LineSegm
 
 }
 
-class Box3Helper extends (/* unused pure expression or super */ null && (LineSegments)) {
+class Box3Helper extends LineSegments {
 
 	constructor( box, color = 0xffff00 ) {
 
@@ -50654,7 +50651,7 @@ class Box3Helper extends (/* unused pure expression or super */ null && (LineSeg
 
 }
 
-class PlaneHelper extends (/* unused pure expression or super */ null && (Line)) {
+class PlaneHelper extends Line {
 
 	constructor( plane, size = 1, hex = 0xffff00 ) {
 
@@ -50712,7 +50709,7 @@ class PlaneHelper extends (/* unused pure expression or super */ null && (Line))
 const _axis = /*@__PURE__*/ new three_module_Vector3();
 let _lineGeometry, _coneGeometry;
 
-class ArrowHelper extends (/* unused pure expression or super */ null && (Object3D)) {
+class ArrowHelper extends Object3D {
 
 	// dir is assumed to be normalized
 
@@ -50811,7 +50808,7 @@ class ArrowHelper extends (/* unused pure expression or super */ null && (Object
 
 }
 
-class AxesHelper extends (/* unused pure expression or super */ null && (LineSegments)) {
+class AxesHelper extends LineSegments {
 
 	constructor( size = 1 ) {
 
@@ -51155,7 +51152,7 @@ class ShapePath {
 
 }
 
-class BoxBufferGeometry extends (/* unused pure expression or super */ null && (BoxGeometry)) { // @deprecated, r144
+class BoxBufferGeometry extends BoxGeometry { // @deprecated, r144
 
 	constructor( width, height, depth, widthSegments, heightSegments, depthSegments ) {
 
@@ -51167,7 +51164,7 @@ class BoxBufferGeometry extends (/* unused pure expression or super */ null && (
 
 }
 
-class CapsuleBufferGeometry extends (/* unused pure expression or super */ null && (CapsuleGeometry)) { // @deprecated, r144
+class CapsuleBufferGeometry extends CapsuleGeometry { // @deprecated, r144
 
 	constructor( radius, length, capSegments, radialSegments ) {
 
@@ -51178,7 +51175,7 @@ class CapsuleBufferGeometry extends (/* unused pure expression or super */ null 
 
 }
 
-class CircleBufferGeometry extends (/* unused pure expression or super */ null && (CircleGeometry)) { // @deprecated, r144
+class CircleBufferGeometry extends CircleGeometry { // @deprecated, r144
 
 	constructor( radius, segments, thetaStart, thetaLength ) {
 
@@ -51189,7 +51186,7 @@ class CircleBufferGeometry extends (/* unused pure expression or super */ null &
 
 }
 
-class ConeBufferGeometry extends (/* unused pure expression or super */ null && (ConeGeometry)) { // @deprecated, r144
+class ConeBufferGeometry extends ConeGeometry { // @deprecated, r144
 
 	constructor( radius, height, radialSegments, heightSegments, openEnded, thetaStart, thetaLength ) {
 
@@ -51200,7 +51197,7 @@ class ConeBufferGeometry extends (/* unused pure expression or super */ null && 
 
 }
 
-class CylinderBufferGeometry extends (/* unused pure expression or super */ null && (CylinderGeometry)) { // @deprecated, r144
+class CylinderBufferGeometry extends CylinderGeometry { // @deprecated, r144
 
 	constructor( radiusTop, radiusBottom, height, radialSegments, heightSegments, openEnded, thetaStart, thetaLength ) {
 
@@ -51211,7 +51208,7 @@ class CylinderBufferGeometry extends (/* unused pure expression or super */ null
 
 }
 
-class DodecahedronBufferGeometry extends (/* unused pure expression or super */ null && (DodecahedronGeometry)) { // @deprecated, r144
+class DodecahedronBufferGeometry extends DodecahedronGeometry { // @deprecated, r144
 
 	constructor( radius, detail ) {
 
@@ -51222,7 +51219,7 @@ class DodecahedronBufferGeometry extends (/* unused pure expression or super */ 
 
 }
 
-class ExtrudeBufferGeometry extends (/* unused pure expression or super */ null && (ExtrudeGeometry)) { // @deprecated, r144
+class ExtrudeBufferGeometry extends ExtrudeGeometry { // @deprecated, r144
 
 	constructor( shapes, options ) {
 
@@ -51233,7 +51230,7 @@ class ExtrudeBufferGeometry extends (/* unused pure expression or super */ null 
 
 }
 
-class IcosahedronBufferGeometry extends (/* unused pure expression or super */ null && (IcosahedronGeometry)) { // @deprecated, r144
+class IcosahedronBufferGeometry extends IcosahedronGeometry { // @deprecated, r144
 
 	constructor( radius, detail ) {
 
@@ -51244,7 +51241,7 @@ class IcosahedronBufferGeometry extends (/* unused pure expression or super */ n
 
 }
 
-class LatheBufferGeometry extends (/* unused pure expression or super */ null && (LatheGeometry)) { // @deprecated, r144
+class LatheBufferGeometry extends LatheGeometry { // @deprecated, r144
 
 	constructor( points, segments, phiStart, phiLength ) {
 
@@ -51255,7 +51252,7 @@ class LatheBufferGeometry extends (/* unused pure expression or super */ null &&
 
 }
 
-class OctahedronBufferGeometry extends (/* unused pure expression or super */ null && (OctahedronGeometry)) { // @deprecated, r144
+class OctahedronBufferGeometry extends OctahedronGeometry { // @deprecated, r144
 
 	constructor( radius, detail ) {
 
@@ -51266,7 +51263,7 @@ class OctahedronBufferGeometry extends (/* unused pure expression or super */ nu
 
 }
 
-class PlaneBufferGeometry extends (/* unused pure expression or super */ null && (PlaneGeometry)) { // @deprecated, r144
+class PlaneBufferGeometry extends PlaneGeometry { // @deprecated, r144
 
 	constructor( width, height, widthSegments, heightSegments ) {
 
@@ -51277,7 +51274,7 @@ class PlaneBufferGeometry extends (/* unused pure expression or super */ null &&
 
 }
 
-class PolyhedronBufferGeometry extends (/* unused pure expression or super */ null && (PolyhedronGeometry)) { // @deprecated, r144
+class PolyhedronBufferGeometry extends PolyhedronGeometry { // @deprecated, r144
 
 	constructor( vertices, indices, radius, detail ) {
 
@@ -51288,7 +51285,7 @@ class PolyhedronBufferGeometry extends (/* unused pure expression or super */ nu
 
 }
 
-class RingBufferGeometry extends (/* unused pure expression or super */ null && (RingGeometry)) { // @deprecated, r144
+class RingBufferGeometry extends RingGeometry { // @deprecated, r144
 
 	constructor( innerRadius, outerRadius, thetaSegments, phiSegments, thetaStart, thetaLength ) {
 
@@ -51299,7 +51296,7 @@ class RingBufferGeometry extends (/* unused pure expression or super */ null && 
 
 }
 
-class ShapeBufferGeometry extends (/* unused pure expression or super */ null && (ShapeGeometry)) { // @deprecated, r144
+class ShapeBufferGeometry extends ShapeGeometry { // @deprecated, r144
 
 	constructor( shapes, curveSegments ) {
 
@@ -51310,7 +51307,7 @@ class ShapeBufferGeometry extends (/* unused pure expression or super */ null &&
 
 }
 
-class SphereBufferGeometry extends (/* unused pure expression or super */ null && (SphereGeometry)) { // @deprecated, r144
+class SphereBufferGeometry extends SphereGeometry { // @deprecated, r144
 
 	constructor( radius, widthSegments, heightSegments, phiStart, phiLength, thetaStart, thetaLength ) {
 
@@ -51321,7 +51318,7 @@ class SphereBufferGeometry extends (/* unused pure expression or super */ null &
 
 }
 
-class TetrahedronBufferGeometry extends (/* unused pure expression or super */ null && (TetrahedronGeometry)) { // @deprecated, r144
+class TetrahedronBufferGeometry extends TetrahedronGeometry { // @deprecated, r144
 
 	constructor( radius, detail ) {
 
@@ -51332,7 +51329,7 @@ class TetrahedronBufferGeometry extends (/* unused pure expression or super */ n
 
 }
 
-class TorusBufferGeometry extends (/* unused pure expression or super */ null && (TorusGeometry)) { // @deprecated, r144
+class TorusBufferGeometry extends TorusGeometry { // @deprecated, r144
 
 	constructor( radius, tube, radialSegments, tubularSegments, arc ) {
 
@@ -51343,7 +51340,7 @@ class TorusBufferGeometry extends (/* unused pure expression or super */ null &&
 
 }
 
-class TorusKnotBufferGeometry extends (/* unused pure expression or super */ null && (TorusKnotGeometry)) { // @deprecated, r144
+class TorusKnotBufferGeometry extends TorusKnotGeometry { // @deprecated, r144
 
 	constructor( radius, tube, tubularSegments, radialSegments, p, q ) {
 
@@ -51354,7 +51351,7 @@ class TorusKnotBufferGeometry extends (/* unused pure expression or super */ nul
 
 }
 
-class TubeBufferGeometry extends (/* unused pure expression or super */ null && (TubeGeometry)) { // @deprecated, r144
+class TubeBufferGeometry extends TubeGeometry { // @deprecated, r144
 
 	constructor( path, tubularSegments, radius, radialSegments, closed ) {
 
@@ -57328,11 +57325,11 @@ function removeModelsById(id) {
 }
 ;// CONCATENATED MODULE: ./src/modules/loaderModel.js
 
-const platformModel = __webpack_require__(936);
-const appleModel = __webpack_require__(189);
-const snakeHeadModel = __webpack_require__(93);
-const snakeBodyModel = __webpack_require__(824);
-const crownModel = __webpack_require__(925);
+const platformModel = __webpack_require__(535);
+const appleModel = __webpack_require__(177);
+const snakeHeadModel = __webpack_require__(351);
+const snakeBodyModel = __webpack_require__(844);
+const crownModel = __webpack_require__(29);
 loaderModel(
 // // dark
 // platformModel,
@@ -57402,16 +57399,16 @@ loaderModel(crownModel, {
 ;// CONCATENATED MODULE: ./src/modules/account.js
 
 const numbers = {
-  0: __webpack_require__(389),
-  1: __webpack_require__(124),
-  2: __webpack_require__(469),
-  3: __webpack_require__(190),
-  4: __webpack_require__(295),
-  5: __webpack_require__(479),
-  6: __webpack_require__(982),
-  7: __webpack_require__(777),
-  8: __webpack_require__(597),
-  9: __webpack_require__(985)
+  0: __webpack_require__(137),
+  1: __webpack_require__(694),
+  2: __webpack_require__(683),
+  3: __webpack_require__(616),
+  4: __webpack_require__(693),
+  5: __webpack_require__(906),
+  6: __webpack_require__(519),
+  7: __webpack_require__(980),
+  8: __webpack_require__(713),
+  9: __webpack_require__(198)
 };
 function defineNumbers(account, info, id) {
   account = "".concat(account);
@@ -57619,8 +57616,6 @@ function animate() {
 
 
 
-
-})();
 
 /******/ })()
 ;
