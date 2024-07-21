@@ -1,23 +1,21 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 // const CopyPlugin = require('copy-webpack-plugin');
 
-const mode = process.env.NODE_ENV || 'development';
-const devMode = mode === 'development';
-const prodMode = !devMode;
-const target = devMode ? 'web' : 'browserslist';
-const devtool = devMode ? 'source-map' : undefined;
+const mode = process.env.NODE_ENV || 'development'
+const devMode = mode === 'development'
+const prodMode = !devMode
+const target = devMode ? 'web' : 'browserslist'
+const devtool = devMode ? 'source-map' : undefined
 
 module.exports = {
   mode,
   target,
   devtool,
   optimization: {
-    minimizer: [
-        new CssMinimizerPlugin()
-    ]
+    minimizer: [new CssMinimizerPlugin()],
   },
   devServer: {
     port: 3000,
@@ -26,17 +24,17 @@ module.exports = {
   },
   entry: path.resolve(__dirname, 'src', 'index.js'),
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     clean: true,
     filename: '[name].[contenthash].js',
-    assetModuleFilename: 'assets/[name][ext]'
+    assetModuleFilename: 'assets/[name][ext]',
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'index.html'),
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css'
+      filename: '[name].[contenthash].css',
     }),
     // new CopyPlugin({
     //   patterns: [{ from: 'static', to: './' }],
@@ -114,7 +112,7 @@ module.exports = {
         generator: {
           filename: 'models/[name][ext]',
         },
-        type: 'asset/resource'
+        type: 'asset/resource',
       },
       {
         test: /\.m?js$/i,
@@ -128,4 +126,4 @@ module.exports = {
       },
     ],
   },
-};
+}
